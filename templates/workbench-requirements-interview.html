@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="richinfo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="通过逐项确认范围、读者、证据、交付和验收决策，把模糊需求转换成可执行的中文技术网页任务。">
+  <title>需求访谈工作台｜请替换任务名称</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/workbench.css">
+</head>
+<body data-reading-progress="true" data-composition-profile="workbench-question-decision">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <nav class="site-nav" aria-label="页内导航">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top">需求访谈</a>
+      <div class="nav-links"><a href="#interview">逐项确认</a><a href="#handoff">交接文本</a></div>
+    </div>
+  </nav>
+
+  <header class="hero workbench-hero" id="top">
+    <div class="hero-inner">
+      <span class="eyebrow">需求决策访谈</span>
+      <h1>一次只确认一个<br>真正会改变结果的问题</h1>
+      <p class="lead">问题按下游影响排序：范围和读者在前，视觉偏好在后。无法确认时必须显式选择“待确认”，不得让模板默认值变成项目承诺。</p>
+      <div class="meta-row"><span>任务：请替换</span><span>访谈对象：请替换</span><span>记录日期：请替换</span></div>
+      <div class="workbench-summary">
+        <p><strong>完成标准</strong><br>每项选择都带有后果说明；完成后生成一份决策表和可直接用于下一轮工作的交接文本。</p>
+        <p class="workbench-note"><strong>使用方式</strong><br>实际任务应替换为材料中真正存在的分歧点，删除不会改变结果的问题。</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" data-workbench>
+    <form>
+      <section class="section" id="interview">
+        <div class="shell">
+          <div class="section-heading"><span class="section-label">五项决策</span><div><h2>逐项确认关键决策</h2><p>选项是结构示例；使用时必须结合实际材料改写名称、后果和交接语句。</p></div></div>
+          <div class="artifact-toolbar">
+            <span class="artifact-progress" data-interview-progress>第 1 项，共 5 项</span>
+            <button class="artifact-button" type="reset">重置全部答案</button>
+          </div>
+          <div class="interview-shell">
+            <div>
+              <section class="interview-question" data-interview-question data-question-short="主要阅读任务" tabindex="-1">
+                <span class="artifact-kicker">Decision 01</span><h3>读者打开页面后，首先要完成什么？</h3><p>阅读任务决定主叙事、首屏和信息密度，是后续所有选择的前提。</p>
+                <div class="interview-options">
+                  <label class="interview-option"><input type="radio" name="reader-task" data-answer-label="理解方案" data-answer-handoff="以方案理解为主，先给结论与整体结构，再展开能力、流程和实施路径。"><span><strong>理解方案</strong>需要连续叙事、总体结构和范围说明。</span></label>
+                  <label class="interview-option"><input type="radio" name="reader-task" data-answer-label="作出决策" data-answer-handoff="以管理决策为主，优先呈现结论、证据、风险、责任和待确认事项。"><span><strong>作出决策</strong>需要先展示结论、证据、风险和责任。</span></label>
+                  <label class="interview-option"><input type="radio" name="reader-task" data-answer-label="验证能力" data-answer-handoff="以能力验证为主，突出架构、接口、机制、证据和适用边界。"><span><strong>验证能力</strong>需要架构、机制、接口和可追溯证据。</span></label>
+                  <label class="interview-option"><input type="radio" name="reader-task" data-answer-label="待确认" data-answer-handoff="待确认主要阅读任务；在确认前不锁定页面叙事模板。"><span><strong>待确认</strong>保留问题，不替用户推断。</span></label>
+                </div>
+              </section>
+
+              <section class="interview-question" data-interview-question data-question-short="内容范围" tabindex="-1">
+                <span class="artifact-kicker">Decision 02</span><h3>本次页面承担多大范围？</h3><p>范围决定信息深度，也决定哪些材料只能作为引用或附件。</p>
+                <div class="interview-options">
+                  <label class="interview-option"><input type="radio" name="scope" data-answer-label="单一主题" data-answer-handoff="页面聚焦一个主题，其他内容仅作为必要背景或引用。"><span><strong>单一主题</strong>围绕一个结论或机制深入展开。</span></label>
+                  <label class="interview-option"><input type="radio" name="scope" data-answer-label="完整章节" data-answer-handoff="覆盖一个完整章节，保留章节内部的范围、证据、结构和行动闭环。"><span><strong>完整章节</strong>覆盖一组相互依赖的内容。</span></label>
+                  <label class="interview-option"><input type="radio" name="scope" data-answer-label="完整材料" data-answer-handoff="覆盖整套材料，但删除没有证据支持的模块并设置长页目录。"><span><strong>完整材料</strong>建立长页主叙事和稳定目录。</span></label>
+                  <label class="interview-option"><input type="radio" name="scope" data-answer-label="待确认" data-answer-handoff="待确认页面范围；暂不合并多个主题。"><span><strong>待确认</strong>避免在范围未定时展开制作。</span></label>
+                </div>
+              </section>
+
+              <section class="interview-question" data-interview-question data-question-short="证据处理" tabindex="-1">
+                <span class="artifact-kicker">Decision 03</span><h3>来源材料中的缺口怎么处理？</h3><p>证据策略会直接影响正式措辞、状态标签和能否对外发送。</p>
+                <div class="interview-options">
+                  <label class="interview-option"><input type="radio" name="evidence" data-answer-label="只使用已确认事实" data-answer-handoff="只使用来源明确支持的事实；无法支持的内容删除。"><span><strong>只使用已确认事实</strong>成品最克制，适合正式外发。</span></label>
+                  <label class="interview-option"><input type="radio" name="evidence" data-answer-label="保留状态区分" data-answer-handoff="保留已确认、候选、条件成立、待确认和范围外状态，并为每项标记依据。"><span><strong>保留状态区分</strong>适合内部评审和范围协商。</span></label>
+                  <label class="interview-option"><input type="radio" name="evidence" data-answer-label="先补充确认" data-answer-handoff="先生成盲点检查和补充问题，确认后再制作正式页面。"><span><strong>先补充确认</strong>暂停成品制作，先关闭阻断缺口。</span></label>
+                  <label class="interview-option"><input type="radio" name="evidence" data-answer-label="待确认" data-answer-handoff="待确认证据策略；所有缺口暂时保留明确标识。"><span><strong>待确认</strong>不自动选择更积极的表达。</span></label>
+                </div>
+              </section>
+
+              <section class="interview-question" data-interview-question data-question-short="交付形式" tabindex="-1">
+                <span class="artifact-kicker">Decision 04</span><h3>页面最终怎样交付？</h3><p>交付方式决定是否保留编辑器、是否需要单文件以及验证范围。</p>
+                <div class="interview-options">
+                  <label class="interview-option"><input type="radio" name="delivery" data-answer-label="可编辑工作版" data-answer-handoff="交付保留相对资源和休眠编辑器的工作版，用于继续修改。"><span><strong>可编辑工作版</strong>保留页面内编辑器和相对资源。</span></label>
+                  <label class="interview-option"><input type="radio" name="delivery" data-answer-label="Clean 单文件" data-answer-handoff="交付移除编辑器的 clean 单文件，并验证断网直接打开。"><span><strong>Clean 单文件</strong>适合正式发送和归档。</span></label>
+                  <label class="interview-option"><input type="radio" name="delivery" data-answer-label="工作版与正式版" data-answer-handoff="同时交付可编辑工作版和经过单文件验证的 clean 正式版。"><span><strong>两种版本</strong>兼顾维护与正式发送。</span></label>
+                  <label class="interview-option"><input type="radio" name="delivery" data-answer-label="待确认" data-answer-handoff="待确认交付方式；暂不删除编辑器或声明单文件交付。"><span><strong>待确认</strong>保留工作版，暂不生成最终包。</span></label>
+                </div>
+              </section>
+
+              <section class="interview-question" data-interview-question data-question-short="验收视口" tabindex="-1">
+                <span class="artifact-kicker">Decision 05</span><h3>哪些环境必须完成验收？</h3><p>视口、打印和断网要求应在制作前明确，而不是交付前临时补救。</p>
+                <div class="interview-options">
+                  <label class="interview-option"><input type="radio" name="qa" data-answer-label="桌面与手机" data-answer-handoff="至少验证 1440px 桌面和 390px 手机布局。"><span><strong>桌面与手机</strong>覆盖主要阅读环境。</span></label>
+                  <label class="interview-option"><input type="radio" name="qa" data-answer-label="桌面、平板、手机与打印" data-answer-handoff="验证 1440px、768px、390px 和打印布局，并检查键盘焦点。"><span><strong>完整验收</strong>覆盖桌面、平板、手机、打印和键盘。</span></label>
+                  <label class="interview-option"><input type="radio" name="qa" data-answer-label="含断网单文件" data-answer-handoff="在完整视口验收之外，验证 clean 单文件断网打开且无外部资源依赖。"><span><strong>含断网交付</strong>增加单文件和资源完整性检查。</span></label>
+                  <label class="interview-option"><input type="radio" name="qa" data-answer-label="待确认" data-answer-handoff="待确认验收环境；默认不宣称已经完成未执行的浏览器检查。"><span><strong>待确认</strong>不提前声称完成验收。</span></label>
+                </div>
+              </section>
+
+              <div class="artifact-actions"><button class="artifact-button" type="button" data-interview-prev>上一项</button><button class="artifact-button is-primary" type="button" data-interview-next>下一项</button></div>
+              <p class="artifact-live-status" data-artifact-status aria-live="polite"></p>
+            </div>
+            <aside class="interview-ledger" aria-label="当前决策摘要"><h3>当前决策</h3><ol data-interview-ledger></ol></aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="handoff">
+        <div class="shell">
+          <div class="section-heading"><span class="section-label">工作交接</span><div><h2>生成工作交接文本</h2><p>复制前复核所有“待确认”事项，并把已确认结果写回任务说明或来源记录。</p></div></div>
+          <div class="artifact-output"><h3>可直接交给 Codex 的任务约束</h3><textarea id="interview-result" data-interview-output readonly aria-label="访谈交接文本"></textarea><div class="artifact-actions"><button class="artifact-button is-primary" type="button" data-copy-target="#interview-result">复制交接文本</button></div></div>
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <footer class="footer"><div class="shell"><span>工作台模板｜未回答不等于默认同意</span><span>版本：请替换</span></div></footer>
+  <script src="../assets/workbench.js" defer></script>
+  <script src="../assets/long-page-enhancements.js" defer></script>
+  <script src="../assets/editorial-editor.js" data-te-editor-asset="true" defer></script>
+</body>
+</html>

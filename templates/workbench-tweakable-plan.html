@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="richinfo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="把实施计划中的固定边界、关键选择和机械性工作分开，通过显式选择生成可执行的计划摘要。">
+  <title>可调整实施计划工作台｜请替换计划名称</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/workbench.css">
+</head>
+<body data-reading-progress="true" data-composition-profile="workbench-plan-controls">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <nav class="site-nav" aria-label="页内导航">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top">可调整实施计划</a>
+      <div class="nav-links"><a href="#fixed">固定边界</a><a href="#decisions">关键选择</a><a href="#handoff">计划摘要</a></div>
+    </div>
+  </nav>
+
+  <header class="hero workbench-hero" id="top">
+    <div class="hero-inner">
+      <span class="eyebrow">可调计划工作台</span>
+      <h1>先调整会改变结果的选择，<br>再执行不会改变方向的工作</h1>
+      <p class="lead">计划不按“先写哪一行代码”组织，而按“哪些决定最可能被修改”组织。固定目标和约束始终可见，机械性任务放在后面。</p>
+      <div class="meta-row"><span>计划对象：请替换</span><span>责任人：请替换</span><span>计划版本：请替换</span></div>
+      <div class="workbench-summary">
+        <p><strong>输出目标</strong><br>用少量显式选择形成可复制的实施约束，让后续执行者知道哪些已经确认、哪些仍待决定。</p>
+        <p class="workbench-note"><strong>边界</strong><br>示例选项只表达交互结构。实际计划必须从来源、代码、接口、合同或验收要求中提取真实选择。</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" data-workbench>
+    <form>
+      <section class="section" id="fixed">
+        <div class="shell">
+          <div class="section-heading"><span class="section-label">固定边界</span><div><h2>不随选项改变的内容</h2><p>如果这些内容本身仍有争议，应先返回需求访谈或盲点检查，而不是假装计划已经稳定。</p></div></div>
+          <div class="fixed-boundary">
+            <article><span class="artifact-kicker">Goal</span><h3>目标</h3><p>请替换来源明确、可验证且不会被局部方案选择改变的目标。</p></article>
+            <article><span class="artifact-kicker">Constraint</span><h3>约束</h3><p>请替换时间、合规、平台、接口或交付形式方面的硬性边界。</p></article>
+            <article><span class="artifact-kicker">Acceptance</span><h3>验收</h3><p>请替换验收物、通过条件、确认责任和证据保存方式。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="decisions">
+        <div class="shell">
+          <div class="section-heading"><span class="section-label">关键选择</span><div><h2>调整关键选择</h2><p>每组只保留真正可行的方案，并说明它对范围、证据、时间或责任的影响。</p></div></div>
+          <div class="plan-decisions">
+            <fieldset class="plan-decision" data-plan-decision="交付分层">
+              <legend>交付分层：工作版和正式版如何组织？</legend>
+              <div class="plan-options">
+                <label class="plan-choice"><input type="radio" name="delivery-layer" data-plan-handoff="同时保留可编辑工作版和 clean 单文件正式版；正式版移除休眠编辑器。"><span><strong>双版本交付</strong>适合仍需维护、同时又要正式发送的任务。</span></label>
+                <label class="plan-choice"><input type="radio" name="delivery-layer" data-plan-handoff="只交付 clean 单文件；源文件保留在内部项目中，不作为对外附件。"><span><strong>仅正式单文件</strong>交付更简单，但收件人无法继续编辑源结构。</span></label>
+                <label class="plan-choice"><input type="radio" name="delivery-layer" data-plan-handoff="交付完整静态资源包；不宣称结果为单文件。"><span><strong>静态资源包</strong>适合包含大量本地媒体的页面。</span></label>
+                <label class="plan-choice"><input type="radio" name="delivery-layer" data-plan-handoff="待确认交付分层；先保留可编辑工作版。"><span><strong>待确认</strong>不提前删除编辑能力。</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="plan-decision" data-plan-decision="证据缺口">
+              <legend>证据缺口：制作过程中如何处理？</legend>
+              <div class="plan-options">
+                <label class="plan-choice"><input type="radio" name="evidence-gap" data-plan-handoff="缺少依据的模块直接删除，只保留来源充分的正式内容。"><span><strong>删除缺口模块</strong>适合直接对外发送的成品。</span></label>
+                <label class="plan-choice"><input type="radio" name="evidence-gap" data-plan-handoff="保留待确认状态和限制说明，用于内部评审，不作为最终承诺。"><span><strong>保留状态标签</strong>适合内部协作和范围确认。</span></label>
+                <label class="plan-choice"><input type="radio" name="evidence-gap" data-plan-handoff="先暂停成品制作，生成盲点清单并补充确认阻断项。"><span><strong>先关闭阻断项</strong>避免返工和错误承诺。</span></label>
+                <label class="plan-choice"><input type="radio" name="evidence-gap" data-plan-handoff="待确认证据缺口策略；当前所有推断保持显式标记。"><span><strong>待确认</strong>不默认为更积极的口径。</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="plan-decision" data-plan-decision="视觉验证">
+              <legend>视觉验证：做到哪个层级？</legend>
+              <div class="plan-options">
+                <label class="plan-choice"><input type="radio" name="visual-qa" data-plan-handoff="验证 1440px、768px、390px、打印和键盘焦点，并检查三套内置主题。"><span><strong>完整回归</strong>适合技能模板和正式重要交付。</span></label>
+                <label class="plan-choice"><input type="radio" name="visual-qa" data-plan-handoff="验证桌面、手机和单文件完整性，主题只检查当前使用项。"><span><strong>交付级验证</strong>覆盖当前任务的主要风险。</span></label>
+                <label class="plan-choice"><input type="radio" name="visual-qa" data-plan-handoff="只进行结构和自动验证；不得声称已经完成浏览器视觉验收。"><span><strong>结构验证</strong>仅用于受限环境或早期草稿。</span></label>
+                <label class="plan-choice"><input type="radio" name="visual-qa" data-plan-handoff="待确认视觉验证范围；交付状态保持为未验收。"><span><strong>待确认</strong>保留真实验证状态。</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <details class="mechanical-work">
+            <summary>确认选择后执行的机械性工作</summary>
+            <ul><li>整理文件路径和稳定章节 ID。</li><li>应用主题变量和共享样式。</li><li>构建单文件或静态资源包。</li><li>运行模板、脚本和交付验证。</li><li>把确认结果回写到维护文档。</li></ul>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" id="handoff">
+        <div class="shell">
+          <div class="section-heading"><span class="section-label">计划交接</span><div><h2>生成计划摘要</h2><p>未选择的关键决定会保留为“待确认”，不会被模板偷偷补齐。</p></div></div>
+          <div class="artifact-output"><h3>可直接交给执行者的计划约束</h3><textarea id="plan-result" data-plan-output readonly aria-label="实施计划调整结果"></textarea><div class="artifact-actions"><button type="button" class="artifact-button is-primary" data-copy-target="#plan-result">复制计划摘要</button><button type="reset" class="artifact-button">清空选择</button></div><p class="artifact-live-status" data-artifact-status aria-live="polite"></p></div>
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <footer class="footer"><div class="shell"><span>工作台模板｜固定边界与可调选择分开管理</span><span>版本：请替换</span></div></footer>
+  <script src="../assets/workbench.js" defer></script>
+  <script src="../assets/long-page-enhancements.js" defer></script>
+  <script src="../assets/editorial-editor.js" data-te-editor-asset="true" defer></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="richinfo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="通过可选择节点、邻近证据和范围说明，解释一个来源明确的技术机制、流程或控制链路。">
+  <title>批注式技术讲解工作台｜请替换技术主题</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/workbench.css">
+</head>
+<body data-reading-progress="true" data-composition-profile="workbench-mechanism-inspection">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <nav class="site-nav" aria-label="页内导航">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top">批注式技术讲解</a>
+      <div class="nav-links"><a href="#overview">机制概览</a><a href="#annotated-map">节点批注</a><a href="#evidence">证据与边界</a></div>
+    </div>
+  </nav>
+
+  <header class="hero workbench-hero" id="top">
+    <div class="hero-inner">
+      <span class="eyebrow">批注式机制解释</span>
+      <h1>先看清整体机制，<br>再逐个打开责任、证据与边界</h1>
+      <p class="lead">交互只用于降低理解成本，不能隐藏关键事实。即使脚本失效，读者仍应从节点名称、简述和正文中理解主要链路。</p>
+      <div class="meta-row"><span>技术主题：请替换</span><span>来源版本：请替换</span><span>适用范围：请替换</span></div>
+      <div class="workbench-summary">
+        <p><strong>解释目标</strong><br>围绕一个真实链路回答四件事：谁负责、依据是什么、对上下游有什么影响、适用边界在哪里。</p>
+        <p class="workbench-note"><strong>限制</strong><br>示例节点是结构占位。实际使用时必须从来源提取真实对象和连接关系，不能为了画满六格添加模块。</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" data-workbench>
+    <section class="section" id="overview">
+      <div class="shell">
+        <div class="section-heading"><span class="section-label">机制概览</span><div><h2>用一句话定义这条链路</h2><p>先给读者一条不依赖图形的完整解释，再进入节点批注。</p></div></div>
+        <div class="thesis-band mechanism-overview-band">
+          <figure class="mechanism-overview-figure" aria-labelledby="mechanism-overview-title">
+            <figcaption id="mechanism-overview-title">核心机制概览</figcaption>
+            <div class="mechanism-main-flow" role="img" aria-label="业务输入依次经过边界校验和核心处理，形成结果输出；输出证据进入审计闭环，并反馈至校验与处理环节">
+              <div class="mechanism-overview-node"><strong>业务输入</strong><span>触发与来源</span></div>
+              <span class="mechanism-arrow" aria-hidden="true">→</span>
+              <div class="mechanism-overview-node"><strong>边界校验</strong><span>身份、规则、范围</span></div>
+              <span class="mechanism-arrow" aria-hidden="true">→</span>
+              <div class="mechanism-overview-node is-core"><strong>核心处理</strong><span>能力与责任</span></div>
+              <span class="mechanism-arrow" aria-hidden="true">→</span>
+              <div class="mechanism-overview-node"><strong>结果输出</strong><span>交付与接收</span></div>
+            </div>
+            <div class="mechanism-feedback" aria-label="审计反馈回路">
+              <span class="mechanism-feedback-input">输出证据 ↓</span>
+              <div class="mechanism-overview-node is-audit"><strong>审计闭环</strong><span>记录、复核、改进</span></div>
+              <span class="mechanism-feedback-return">↖ 反馈至校验与处理</span>
+            </div>
+          </figure>
+          <div class="mechanism-overview-copy">
+            <span class="artifact-kicker">Reading conclusion</span>
+            <strong>输入先经过边界校验，再由核心能力处理并形成可验证输出；全过程通过审计闭环保持可追溯。</strong>
+            <p>实际使用时，请依据来源材料替换节点名称、责任主体、证据和适用边界。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="annotated-map">
+      <div class="shell-wide">
+        <div class="section-heading"><span class="section-label">节点地图</span><div><h2>选择节点查看批注</h2><p>每个节点保留一句可独立理解的摘要；右侧批注面板补充责任、证据和边界。</p></div></div>
+        <div class="explainer-layout">
+          <div class="explainer-map" aria-label="技术机制节点图">
+            <button type="button" class="explainer-node" data-explainer-node aria-pressed="false" data-title="业务输入" data-body="说明请求、事件或任务从哪里进入，以及进入前已经满足的条件。" data-responsibility="请替换输入提供方与确认责任" data-evidence="请替换需求、接口或流程依据" data-boundary="不得把未校验输入描述为已确认事实"><strong>业务输入</strong><span>触发条件与输入责任</span></button>
+            <button type="button" class="explainer-node" data-explainer-node aria-pressed="false" data-title="边界校验" data-body="说明身份、权限、格式、范围或安全规则如何决定请求能否继续。" data-responsibility="请替换控制责任方" data-evidence="请替换制度、接口或安全要求" data-boundary="区分拒绝、待补充和允许进入的状态"><strong>边界校验</strong><span>身份、规则与范围</span></button>
+            <button type="button" class="explainer-node" data-explainer-node aria-pressed="false" data-title="核心处理" data-body="说明系统真正承担的处理责任、关键判断和不负责的事项。" data-responsibility="请替换核心模块与责任主体" data-evidence="请替换架构、设计或产品资料" data-boundary="不得把候选能力写成已经上线"><strong>核心处理</strong><span>主要能力与关键判断</span></button>
+            <button type="button" class="explainer-node" data-explainer-node aria-pressed="false" data-title="外部协同" data-body="说明需要调用的外部系统、数据或人工环节，以及依赖失败时的处理方式。" data-responsibility="请替换接口双方责任" data-evidence="请替换接口清单或协同流程" data-boundary="外部依赖不应被描述为本系统独立能力"><strong>外部协同</strong><span>接口、数据与人工依赖</span></button>
+            <button type="button" class="explainer-node" data-explainer-node aria-pressed="false" data-title="结果输出" data-body="说明输出内容、接收对象、质量条件和后续用途。" data-responsibility="请替换结果确认与使用责任" data-evidence="请替换交付物或输出定义" data-boundary="输出不等同于业务成效，除非来源提供因果证据"><strong>结果输出</strong><span>交付物与接收对象</span></button>
+            <button type="button" class="explainer-node" data-explainer-node aria-pressed="false" data-title="审计闭环" data-body="说明日志、复核、告警、问题处置和持续改进如何形成可追溯闭环。" data-responsibility="请替换运营、审计与升级责任" data-evidence="请替换日志、报告或验收材料" data-boundary="明确保存期限、覆盖范围和未纳入事项"><strong>审计闭环</strong><span>记录、复核与持续改进</span></button>
+          </div>
+          <aside class="explainer-detail" aria-live="polite">
+            <span class="artifact-kicker">Node annotation</span><h3 data-explainer-title>业务输入</h3><p data-explainer-body>说明请求、事件或任务从哪里进入，以及进入前已经满足的条件。</p>
+            <dl><div><dt>责任</dt><dd data-explainer-responsibility>请替换输入提供方与确认责任</dd></div><div><dt>证据</dt><dd data-explainer-evidence>请替换需求、接口或流程依据</dd></div><div><dt>边界</dt><dd data-explainer-boundary>不得把未校验输入描述为已确认事实</dd></div></dl>
+            <p class="artifact-live-status" data-artifact-status aria-live="polite"></p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="evidence">
+      <div class="shell">
+        <div class="section-heading"><span class="section-label">依据与边界</span><div><h2>把解释重新落到来源</h2><p>节点图负责关系，证据链负责证明。两者名称、范围和状态必须一致。</p></div></div>
+        <div class="evidence-chain">
+          <article class="evidence-chain-row"><span class="evidence-chain-source">来源与版本</span><strong>请替换真实材料名称和日期</strong><span>支持哪一个节点或连接关系</span><span>未覆盖内容继续标记待确认</span></article>
+          <article class="evidence-chain-row"><span class="evidence-chain-source">来源事实</span><strong>请替换不改变原意的事实摘述</strong><span>对读者理解产生什么影响</span><span>区分事实与解释</span></article>
+          <article class="evidence-chain-row"><span class="evidence-chain-source">适用边界</span><strong>请替换版本、环境、对象和前置条件</strong><span>限制解释可以推广的范围</span><span>不得从单一示例推导普遍承诺</span></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell"><span>工作台模板｜节点和连接必须来源明确</span><span>版本：请替换</span></div></footer>
+  <script src="../assets/workbench.js" defer></script>
+  <script src="../assets/long-page-enhancements.js" defer></script>
+  <script src="../assets/editorial-editor.js" data-te-editor-asset="true" defer></script>
+</body>
+</html>

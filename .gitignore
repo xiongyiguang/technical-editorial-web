@@ -1,0 +1,12 @@
+# Generated delivery and validation artifacts
+output/
+outputs/
+.playwright-cli/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db

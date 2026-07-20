@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="bank-of-china">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Technical Editorial Brief 技术白皮书模板">
+  <title>技术白皮书｜请替换主题</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/base.css">
+</head>
+<body data-reading-progress="true" data-composition-profile="whitepaper-layered-flow">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <nav class="site-nav" aria-label="页面导航">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top">技术白皮书</a>
+      <div class="nav-links"><a href="#scope">范围</a><a href="#architecture">架构</a><a href="#request-flow">链路</a><a href="#modules">接口</a><a href="#governance">治理</a><a href="#tradeoffs">取舍</a></div>
+    </div>
+  </nav>
+
+  <header class="hero hero-architecture" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">技术白皮书</div>
+        <h1>请替换技术主题：<br><span class="marker">边界、架构与工程取舍</span></h1>
+        <p class="lead">说明本文解决的问题、适用范围、目标读者和关键结论。不要把产品宣传语当作技术论证。</p>
+        <div class="meta-row"><span>版本：V1.0</span><span>适用范围：请替换</span><span>发布日期：请替换</span></div>
+      </div>
+      <figure class="architecture-mini" aria-labelledby="hero-architecture-title">
+        <figcaption id="hero-architecture-title" class="caption">最高层技术链路｜按真实边界替换</figcaption>
+        <div class="architecture-mini-row"><span>输入与调用方</span><span>请替换用户、渠道或外部系统</span></div>
+        <div class="architecture-mini-row is-key"><span>受控平台</span><span>请替换核心责任和信任边界</span></div>
+        <div class="architecture-mini-row"><span>数据与基础设施</span><span>请替换数据、模型和运行环境</span></div>
+      </figure>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" id="scope">
+      <div class="shell">
+        <div class="section-heading is-numbered">
+          <span class="section-index">01</span>
+          <div><span class="section-label">范围与前提</span><h2>范围、非目标与前置条件</h2></div>
+          <p class="section-aside">技术可信度从边界开始。未被材料支持的系统、数据、能力和承诺必须明确排除或标记待验证。</p>
+        </div>
+        <div class="scope-map">
+          <article class="scope-core"><div><div class="meta">技术核心</div><h3>请替换本文论证对象</h3></div><p>用一句话说明系统责任和价值边界。</p></article>
+          <div class="scope-list">
+            <article class="scope-item"><div class="meta">包含</div><h3>请替换覆盖范围</h3><p>列出系统、数据、流程或场景。</p></article>
+            <article class="scope-item"><div class="meta">依赖</div><h3>请替换前置条件</h3><p>列出接口、环境、组织或治理依赖。</p></article>
+            <article class="scope-item"><div class="meta">非目标</div><h3>请替换不覆盖范围</h3><p>防止建议被扩大到未经论证的范围。</p></article>
+            <article class="scope-item"><div class="meta">假设</div><h3>请替换待验证条件</h3><p>说明验证方式和影响。</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="architecture">
+      <div class="shell-wide">
+        <div class="section-heading is-numbered">
+          <span class="section-index">02</span>
+          <div><span class="section-label">系统架构</span><div class="section-title-row"><h2>系统总体架构与横切治理</h2><span class="section-count">请按真实层级替换</span></div></div>
+          <p class="section-aside">按真实系统边界保留必要层次；不适用的层级应删除，模块名称必须与后文职责和接口保持一致。</p>
+        </div>
+        <figure class="system-architecture" aria-labelledby="whitepaper-system-architecture-title">
+          <figcaption id="whitepaper-system-architecture-title" class="caption">系统总体架构｜请替换真实层级、责任模块与外部依赖</figcaption>
+          <div class="arch-ingress">
+            <div class="arch-edge-label">调用方与外部系统</div>
+            <div class="arch-edge-items"><div>请替换用户或终端</div><div>请替换业务渠道</div><div>请替换外部系统</div></div>
+          </div>
+          <div class="arch-flow-note">调用向下进入受控平台，响应、指标和审计证据按真实链路返回</div>
+          <div class="arch-body">
+            <div class="architecture">
+              <div class="arch-layer"><div class="arch-label">接入层</div><div class="arch-modules"><div>统一入口</div><div>身份与权限</div><div>协议与流量控制</div></div></div>
+              <div class="arch-layer"><div class="arch-label">应用层</div><div class="arch-modules"><div>请替换业务应用</div><div>请替换管理应用</div><div>请替换运营应用</div></div></div>
+              <div class="arch-layer is-key"><div class="arch-label">核心平台层</div><div class="arch-modules"><div>请替换核心引擎</div><div>请替换编排服务</div><div>请替换共享能力</div></div></div>
+              <div class="arch-layer"><div class="arch-label">数据与资源层</div><div class="arch-modules"><div>请替换业务数据</div><div>请替换知识或模型</div><div>请替换数据服务</div></div></div>
+            </div>
+            <aside class="arch-governance" aria-label="横切治理能力">
+              <div class="arch-governance-title">治理与运维</div><div class="arch-governance-item">安全控制</div><div class="arch-governance-item">质量治理</div><div class="arch-governance-item">可观测性</div><div class="arch-governance-item">审计留痕</div>
+            </aside>
+          </div>
+          <div class="arch-foundation">
+            <div class="arch-foundation-label">基础设施与部署</div>
+            <div class="arch-foundation-items"><div>请替换计算环境</div><div>请替换网络与存储</div><div>请替换容灾与备份</div></div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="request-flow">
+      <div class="shell-wide">
+        <div class="section-heading is-numbered">
+          <span class="section-index">03</span>
+          <div><span class="section-label">请求与数据链路</span><h2>请求链路与信任边界</h2></div>
+          <p class="section-aside">链路节点用于表达责任或状态变化；在真实交付中补充数据方向、外部系统和异常返回。</p>
+        </div>
+        <div class="process-chain" aria-label="技术链路" data-composition-family="sequence" data-composition-variant="process-chain">
+          <article class="process-node"><span class="meta">接入</span><h3>调用与认证</h3><p>请替换调用方、协议和身份机制。</p></article>
+          <article class="process-node"><span class="meta">控制</span><h3>策略与路由</h3><p>请替换策略判断和信任边界。</p></article>
+          <article class="process-node"><span class="meta">执行</span><h3>编排与处理</h3><p>请替换核心模块和责任。</p></article>
+          <article class="process-node"><span class="meta">验证</span><h3>评估与审计</h3><p>请替换质量、安全和留痕机制。</p></article>
+          <article class="process-node"><span class="meta">输出</span><h3>响应与观测</h3><p>请替换输出、指标和异常回路。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="modules">
+      <div class="shell">
+        <div class="section-heading is-numbered">
+          <span class="section-index">04</span>
+          <div><span class="section-label">职责与接口</span><h2>模块职责与接口契约</h2></div>
+          <p class="section-aside">保持模块命名与架构图一致；输入、输出和关键依赖必须可追踪。</p>
+        </div>
+        <div class="table-wrap" role="region" aria-label="模块职责表" tabindex="0">
+          <table>
+            <caption>模块职责、输入输出与关键依赖</caption>
+            <thead><tr><th scope="col">模块</th><th scope="col">主要职责</th><th scope="col">输入</th><th scope="col">输出</th><th scope="col">关键依赖</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">请替换模块</th><td>请替换职责</td><td>请替换输入</td><td>请替换输出</td><td>请替换依赖</td></tr>
+              <tr><th scope="row">请替换模块</th><td>请替换职责</td><td>请替换输入</td><td>请替换输出</td><td>请替换依赖</td></tr>
+              <tr><th scope="row">请替换模块</th><td>请替换职责</td><td>请替换输入</td><td>请替换输出</td><td>请替换依赖</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="governance">
+      <div class="shell">
+        <div class="section-heading is-numbered">
+          <span class="section-index">05</span>
+          <div><span class="section-label">治理与保障</span><h2>安全、治理与运行保障</h2><p>将控制点映射到风险、责任主体和可审计证据。</p></div>
+        </div>
+        <div class="decision-grid" role="table" aria-label="控制域与审计证据">
+          <div class="decision-row is-header" role="row"><span>控制域</span><span>控制目标</span><span>责任／证据</span><span>验证方式</span></div>
+          <div class="decision-row" role="row"><span class="decision-key">身份</span><div class="decision-main"><strong>认证、授权与职责分离</strong><span>请替换最小权限和访问控制要求。</span></div><span class="decision-meta">责任主体：请替换</span><span class="decision-meta">证据：请替换</span></div>
+          <div class="decision-row" role="row"><span class="decision-key">数据</span><div class="decision-main"><strong>分级分类与模型治理</strong><span>请替换质量、评估和内容安全要求。</span></div><span class="decision-meta">责任主体：请替换</span><span class="decision-meta">证据：请替换</span></div>
+          <div class="decision-row" role="row"><span class="decision-key">运行</span><div class="decision-main"><strong>可观测、容量与韧性</strong><span>请替换监控、告警、容灾和恢复要求。</span></div><span class="decision-meta">责任主体：请替换</span><span class="decision-meta">证据：请替换</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tradeoffs">
+      <div class="shell">
+        <div class="section-heading is-numbered">
+          <span class="section-index">06</span>
+          <div><span class="section-label">工程取舍</span><h2>工程方案与取舍</h2></div>
+          <p class="section-aside">只有存在可比较方案时才保留本模块；维度必须稳定，结论必须有依据。</p>
+        </div>
+        <div class="comparison">
+          <article class="comparison-panel">
+            <div class="meta">方案 A</div><h3>请替换技术路径</h3>
+            <div class="comparison-list">
+              <div class="comparison-row"><span>适用条件</span><strong>请替换</strong></div>
+              <div class="comparison-row"><span>主要优势</span><strong>请替换</strong></div>
+              <div class="comparison-row"><span>关键代价</span><strong>请替换</strong></div>
+            </div>
+          </article>
+          <article class="comparison-panel is-target">
+            <div class="meta">建议路径</div><h3>请替换建议方案</h3>
+            <div class="comparison-list">
+              <div class="comparison-row"><span>适用条件</span><strong>请替换</strong></div>
+              <div class="comparison-row"><span>选择依据</span><strong>请替换</strong></div>
+              <div class="comparison-row"><span>保留风险</span><strong>请替换</strong></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell-wide">
+        <div class="thesis-band">
+          <strong>技术可信度来自清晰的边界、可追踪的接口和能够被验证的工程证据。</strong>
+          <p>请补充参考资料、术语表和仍需验证的技术假设。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell footer-inner"><span>请替换技术主题 · V1.0</span><span>参考资料与术语表：请补充</span></div></footer>
+  <script src="../assets/long-page-enhancements.js" defer></script>
+  <script src="../assets/editorial-editor.js" data-te-editor-asset="true" defer></script>
+</body>
+</html>

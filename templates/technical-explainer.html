@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="china-mobile">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Technical Editorial Brief 技术机制解释模板">
+  <title>技术机制解释｜请替换主题</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/base.css">
+</head>
+<body data-reading-progress="true" data-composition-profile="explainer-path-annotation">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <nav class="site-nav" aria-label="页面导航">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top">技术机制解释</a>
+      <div class="nav-links"><a href="#path">路径</a><a href="#walkthrough">走读</a><a href="#configuration">配置</a><a href="#gotchas">注意</a><a href="#faq">问答</a></div>
+    </div>
+  </nav>
+
+  <header class="hero hero-explainer" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">技术机制解释</div>
+        <h1>请替换机制主题：<br><span class="marker">一条链路讲清楚如何工作</span></h1>
+        <p class="lead">TL;DR：用一段可核验的文字说明输入、核心机制、输出和关键边界。标注阅读过的文件、材料或证据范围。</p>
+        <div class="meta-row"><span>读者：请替换</span><span>证据范围：请替换</span><span>更新日期：请替换</span></div>
+      </div>
+      <figure class="mechanism-path" aria-labelledby="hero-path-title">
+        <figcaption id="hero-path-title" class="caption">最高层机制路径｜按真实材料替换</figcaption>
+        <div class="mechanism-step"><strong>1｜识别输入</strong></div>
+        <div class="mechanism-step"><strong>2｜执行核心规则</strong></div>
+        <div class="mechanism-step"><strong>3｜返回结果与证据</strong></div>
+      </figure>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" id="path">
+      <div class="shell">
+        <div class="section-heading is-numbered">
+          <span class="section-index">01</span>
+          <div><span class="section-label">结论依据</span><h2>阅读范围与结论边界</h2></div>
+        </div>
+        <div class="context-panel">
+          <span class="context-label">依据范围</span>
+          <h3>已审阅材料与待验证假设</h3>
+          <p>列出已审阅的文件、接口、配置、制度或数据。说明哪些结论来自事实、哪些仍是解释或待验证假设。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="walkthrough">
+      <div class="shell-wide">
+        <div class="section-heading is-numbered">
+          <span class="section-index">02</span>
+          <div><span class="section-label">路径走读</span><h2>端到端路径走读</h2></div>
+          <p class="section-aside">步骤按真实调用、数据或责任顺序排列；可展开证据紧邻相应步骤。</p>
+        </div>
+        <div class="milestone-rail" data-composition-family="sequence" data-composition-variant="milestone-rail">
+          <article class="milestone-item"><div class="milestone-time">步骤 1</div><div class="milestone-axis" aria-hidden="true"></div><div class="milestone-content"><h3>识别调用方与输入</h3><p>解释输入如何进入系统、由谁提供、在哪个位置被验证。</p><div class="milestone-tags"><span>来源：请替换</span><span>边界：请替换</span></div></div></article>
+          <article class="milestone-item"><div class="milestone-time">步骤 2</div><div class="milestone-axis" aria-hidden="true"></div><div class="milestone-content"><h3>执行核心机制</h3><p>解释最关键的规则、状态变化和失败路径。</p><div class="milestone-tags"><span>责任：请替换</span><span>证据：请替换</span></div></div></article>
+          <article class="milestone-item"><div class="milestone-time">步骤 3</div><div class="milestone-axis" aria-hidden="true"></div><div class="milestone-content"><h3>输出、记录与反馈</h3><p>解释结果如何返回、证据如何留存、后续如何消费。</p><div class="milestone-tags"><span>输出：请替换</span><span>观测：请替换</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="configuration">
+      <div class="shell">
+        <div class="section-heading is-numbered"><span class="section-index">03</span><div><span class="section-label">实现依据</span><h2>关键配置、接口或代码</h2></div><p class="section-aside">本节聚焦能够解释机制和边界的关键片段，完整源码按审查需要另行提供。</p></div>
+        <div class="code-tour">
+          <nav class="code-tour-nav" aria-label="证据索引"><a href="#evidence-a">配置入口</a><a href="#evidence-b">核心处理</a><a href="#evidence-c">响应与审计</a></nav>
+          <div class="code-tour-content">
+            <h3 id="evidence-a">配置入口</h3><pre><code># 请替换经过核验的配置或接口示意
+default: bounded</code></pre>
+            <h3 id="evidence-b">核心处理</h3><p>解释调用关系、状态变化和关键条件。</p>
+            <h3 id="evidence-c">响应与审计</h3><p>解释成功、失败和证据留存方式。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gotchas">
+      <div class="shell">
+        <div class="section-heading is-numbered"><span class="section-index">04</span><div><span class="section-label">关键边界</span><h2>容易误解的边界</h2><p>对应呈现常见误解、真实行为及其影响。</p></div></div>
+        <div class="annotated-panel">
+          <div class="annotated-source"><h3>机制中的关键事实</h3><p>请替换最容易被错误类推的原文、代码、配置或图示。</p></div>
+          <aside class="annotated-notes" aria-label="边界批注">
+            <div class="annotation-note"><strong>注意 1</strong><p>说明事实边界和错误理解的后果。</p></div>
+            <div class="annotation-note"><strong>注意 2</strong><p>说明环境、版本或前置条件。</p></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading is-numbered"><span class="section-index">05</span><div><span class="section-label">机制对比</span><h2>与相近机制的差异</h2></div><p class="section-aside">存在真实替代方案时保留本节，并使用一致的比较维度。</p></div>
+        <div class="comparison">
+          <article class="comparison-panel"><div class="meta">机制 A</div><h3>请替换相近方案</h3><div class="comparison-list"><div class="comparison-row"><span>核心假设</span><strong>请替换</strong></div><div class="comparison-row"><span>主要代价</span><strong>请替换</strong></div></div></article>
+          <article class="comparison-panel is-target"><div class="meta">本文机制</div><h3>请替换目标方案</h3><div class="comparison-list"><div class="comparison-row"><span>核心假设</span><strong>请替换</strong></div><div class="comparison-row"><span>适用边界</span><strong>请替换</strong></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="shell">
+        <div class="section-heading is-numbered"><span class="section-index">06</span><div><span class="section-label">问题与术语</span><h2>常见问题与术语</h2><p>围绕源材料中的真实问题和特定术语进行说明。</p></div></div>
+        <div class="faq-list">
+          <details><summary>请替换常见问题一</summary><p>请替换有证据支持的简明回答。</p></details>
+          <details><summary>请替换常见问题二</summary><p>请替换回答、限制和来源。</p></details>
+        </div>
+        <dl class="glossary-grid" style="margin-top: 48px;">
+          <div class="glossary-item"><dt>术语 A</dt><dd>请替换源材料中的定义。</dd></div>
+          <div class="glossary-item"><dt>术语 B</dt><dd>请替换定义及适用边界。</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell footer-inner"><span>技术机制解释 · V1.0</span><span>来源与限制：请替换</span></div></footer>
+  <script src="../assets/long-page-enhancements.js" defer></script>
+  <script src="../assets/editorial-editor.js" data-te-editor-asset="true" defer></script>
+</body>
+</html>

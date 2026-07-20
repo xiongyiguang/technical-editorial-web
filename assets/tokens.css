@@ -1,0 +1,68 @@
+﻿:root,
+[data-theme="richinfo"] {
+  --canvas: #ffffff;
+  --canvas-soft: #fafaf8;
+  --surface: #f4f4f1;
+  --surface-strong: #ecece7;
+  --ink: #111111;
+  --body: #474747;
+  --muted: #717171;
+  --line: #deded8;
+  --accent: #ff642a;
+  --accent-rgb: 255, 100, 42;
+  --accent-aux: #ffc000;
+  --accent-aux-rgb: 255, 192, 0;
+  --accent-tint: rgba(var(--accent-rgb), 0.08);
+  --accent-tint-strong: rgba(var(--accent-rgb), 0.12);
+  --accent-line: rgba(var(--accent-rgb), 0.32);
+  --editorial-highlight: #fde28b;
+  --editorial-highlight-soft: #fff9ed;
+  --orbit-neutral: #d8d8d5;
+  --orbit-dark: #2c2c2c;
+  --deep-surface: #2b1d16;
+  --deep-body: #f4e9e2;
+  --deep-muted: #d6c3b8;
+  --deep-line: rgba(255, 255, 255, 0.2);
+  --font-sans: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  --fs-meta: 16px;
+  --fs-body: 16px;
+  --fs-lead: 21px;
+  --fs-subtitle: 26px;
+  --fs-section: clamp(32px, 4vw, 48px);
+  --fs-hero: clamp(42px, 6vw, 60px);
+  --fs-kpi: clamp(38px, 5vw, 60px);
+  --content: 1120px;
+  --wide: 1280px;
+  --reading: 760px;
+  --page-pad: clamp(20px, 5vw, 72px);
+  --section-space: clamp(88px, 10vw, 140px);
+  --gap: 24px;
+  --radius-sm: 12px;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --rule: 1px solid var(--line);
+}
+
+[data-theme="china-mobile"] {
+  --accent: #1184cf;
+  --accent-rgb: 17, 132, 207;
+  --accent-aux: #8dc222;
+  --accent-aux-rgb: 141, 194, 34;
+  --editorial-highlight: #d7edf9;
+  --editorial-highlight-soft: #f4fafe;
+  --deep-surface: #102a3b;
+  --deep-body: #e7f3fa;
+  --deep-muted: #b9d3e2;
+}
+
+[data-theme="bank-of-china"] {
+  --accent: #bc260d;
+  --accent-rgb: 188, 38, 13;
+  --accent-aux: #d4af37;
+  --accent-aux-rgb: 212, 175, 55;
+  --editorial-highlight: #f1d8d4;
+  --editorial-highlight-soft: #fff8f7;
+  --deep-surface: #321a17;
+  --deep-body: #f7e8e5;
+  --deep-muted: #dfc4bf;
+}

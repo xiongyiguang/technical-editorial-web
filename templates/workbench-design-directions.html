@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="richinfo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="把同一份内容渲染为多个中文技术编辑方向，并记录采纳、保留和排除判断。">
+  <title>视觉方向选择工作台｜请替换任务名称</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/workbench.css">
+</head>
+<body data-reading-progress="true" data-composition-profile="workbench-direction-compare">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <nav class="site-nav" aria-label="页内导航">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top">视觉方向选择</a>
+      <div class="nav-links"><a href="#basis">共同内容</a><a href="#directions">方向比较</a><a href="#decision">判断结果</a></div>
+    </div>
+  </nav>
+
+  <header class="hero workbench-hero" id="top">
+    <div class="hero-inner">
+      <span class="eyebrow">设计方向比较工作台</span>
+      <h1>同一份内容，先把方向摆在一起<br>再决定页面怎么说话</h1>
+      <p class="lead">四个方向必须使用相同事实和相同信息范围，只改变阅读路径、密度、证据位置和交互方式，避免把内容差异误判为设计差异。</p>
+      <div class="meta-row"><span>对象：请替换</span><span>读者：请替换</span><span>决策人：请替换</span></div>
+      <div class="workbench-summary">
+        <p><strong>判断方法</strong><br>对每个方向选择“采纳”“保留参考”或“排除”。可以采纳一个主方向，同时从其他方向保留局部方法。</p>
+        <p class="workbench-note"><strong>约束</strong><br>方向示意只表达结构，不携带客户名称、项目指标或未经材料支持的文案。</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" data-workbench>
+    <form>
+      <section class="section" id="basis">
+        <div class="shell">
+          <div class="section-heading">
+            <span class="section-label">共同依据</span>
+            <div><h2>四个方向使用同一内容基线</h2><p>请把真正决定页面结构的内容写在这里；没有证据支持的指标、图片和成果不进入任何方向。</p></div>
+          </div>
+          <div class="evidence-chain">
+            <article class="evidence-chain-row"><span class="evidence-chain-source">核心结论</span><strong>请替换本页必须让读者记住的一句话</strong><span>所有方向保持一致</span><span>不得因版式改变结论含义</span></article>
+            <article class="evidence-chain-row"><span class="evidence-chain-source">关键证据</span><strong>请替换来源、日期和事实</strong><span>决定证据需要靠近还是集中呈现</span><span>缺失证据继续标记待确认</span></article>
+            <article class="evidence-chain-row"><span class="evidence-chain-source">主要行动</span><strong>请替换读者需要作出的决定</strong><span>决定页面结尾和交互强度</span><span>不增加泛化营销按钮</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="directions">
+        <div class="shell-wide">
+          <div class="section-heading">
+            <span class="section-label">四种方向</span>
+            <div><h2>比较四种阅读方式</h2><p>下面的差异是结构方法，不是固定皮肤。正式页面仍按所选主题和真实材料重新生成。</p></div>
+          </div>
+          <div class="direction-grid">
+            <article class="direction-card" data-direction-id="editorial" data-direction-title="编辑叙事" data-direction-state="undecided">
+              <span class="artifact-kicker">Direction A</span><h3>编辑叙事</h3><p>以结论、证据和解释形成连续阅读线，适合需要建立理解和信任的正式长页。</p>
+              <div class="direction-preview is-linear" aria-label="编辑叙事方向结构示意"><span class="is-accent"></span><span></span><span></span></div>
+              <dl class="direction-facts"><div><dt>阅读路径</dt><dd>从结论到证据再到行动</dd></div><div><dt>信息密度</dt><dd>中等，留白充足</dd></div><div><dt>主要风险</dt><dd>比较任务可能不够直接</dd></div></dl>
+              <span class="artifact-state">状态：<span data-direction-state-label>未判断</span></span>
+              <div class="artifact-actions"><button type="button" class="artifact-button" data-direction-action="adopt" aria-pressed="false">采纳</button><button type="button" class="artifact-button" data-direction-action="retain" aria-pressed="false">保留参考</button><button type="button" class="artifact-button" data-direction-action="exclude" aria-pressed="false">排除</button></div>
+            </article>
+
+            <article class="direction-card" data-direction-id="evidence" data-direction-title="证据双栏" data-direction-state="undecided">
+              <span class="artifact-kicker">Direction B</span><h3>证据双栏</h3><p>主栏解释结论，侧栏持续显示来源、限制和责任，适合评审、投标和需要追溯的内容。</p>
+              <div class="direction-preview is-evidence" aria-label="证据双栏方向结构示意"><span></span><span class="is-accent"></span><span></span><span></span></div>
+              <dl class="direction-facts"><div><dt>阅读路径</dt><dd>论述与证据并行</dd></div><div><dt>信息密度</dt><dd>较高，适合桌面阅读</dd></div><div><dt>主要风险</dt><dd>移动端需要恢复线性顺序</dd></div></dl>
+              <span class="artifact-state">状态：<span data-direction-state-label>未判断</span></span>
+              <div class="artifact-actions"><button type="button" class="artifact-button" data-direction-action="adopt" aria-pressed="false">采纳</button><button type="button" class="artifact-button" data-direction-action="retain" aria-pressed="false">保留参考</button><button type="button" class="artifact-button" data-direction-action="exclude" aria-pressed="false">排除</button></div>
+            </article>
+
+            <article class="direction-card" data-direction-id="decision" data-direction-title="决策台账" data-direction-state="undecided">
+              <span class="artifact-kicker">Direction C</span><h3>决策台账</h3><p>用稳定维度呈现发现、证据、责任和状态，适合管理汇报、阶段复盘和范围确认。</p>
+              <div class="direction-preview" aria-label="决策台账方向结构示意"><span class="is-accent"></span><span></span><span></span><span></span></div>
+              <dl class="direction-facts"><div><dt>阅读路径</dt><dd>按优先级和状态扫描</dd></div><div><dt>信息密度</dt><dd>高，结论非常直接</dd></div><div><dt>主要风险</dt><dd>不适合承载长篇机制解释</dd></div></dl>
+              <span class="artifact-state">状态：<span data-direction-state-label>未判断</span></span>
+              <div class="artifact-actions"><button type="button" class="artifact-button" data-direction-action="adopt" aria-pressed="false">采纳</button><button type="button" class="artifact-button" data-direction-action="retain" aria-pressed="false">保留参考</button><button type="button" class="artifact-button" data-direction-action="exclude" aria-pressed="false">排除</button></div>
+            </article>
+
+            <article class="direction-card" data-direction-id="canvas" data-direction-title="机制画布" data-direction-state="undecided">
+              <span class="artifact-kicker">Direction D</span><h3>机制画布</h3><p>让一张真实机制图成为主阅读面，周围用批注解释节点、边界和影响，适合复杂技术机制。</p>
+              <div class="direction-preview is-canvas" aria-label="机制画布方向结构示意"><span></span><span class="is-accent"></span><span></span><span></span><span></span><span></span></div>
+              <dl class="direction-facts"><div><dt>阅读路径</dt><dd>从整体机制进入局部解释</dd></div><div><dt>信息密度</dt><dd>中高，关系优先</dd></div><div><dt>主要风险</dt><dd>没有真实关系时会沦为装饰</dd></div></dl>
+              <span class="artifact-state">状态：<span data-direction-state-label>未判断</span></span>
+              <div class="artifact-actions"><button type="button" class="artifact-button" data-direction-action="adopt" aria-pressed="false">采纳</button><button type="button" class="artifact-button" data-direction-action="retain" aria-pressed="false">保留参考</button><button type="button" class="artifact-button" data-direction-action="exclude" aria-pressed="false">排除</button></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="decision">
+        <div class="shell">
+          <div class="section-heading"><span class="section-label">方向结论</span><div><h2>生成方向判断</h2><p>复制结果后，把它作为下一轮页面制作的设计约束，而不是要求复刻某个示意页面。</p></div></div>
+          <div class="artifact-output">
+            <h3>可直接交给 Codex 的方向说明</h3>
+            <textarea id="direction-result" data-direction-output readonly aria-label="方向判断结果"></textarea>
+            <div class="artifact-actions"><button class="artifact-button is-primary" type="button" data-copy-target="#direction-result">复制方向说明</button><button class="artifact-button" type="reset">恢复未判断</button></div>
+            <p class="artifact-live-status" data-artifact-status aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <footer class="footer"><div class="shell"><span>工作台模板｜只保留可复用结构方法</span><span>版本：请替换</span></div></footer>
+  <script src="../assets/workbench.js" defer></script>
+  <script src="../assets/long-page-enhancements.js" defer></script>
+  <script src="../assets/editorial-editor.js" data-te-editor-asset="true" defer></script>
+</body>
+</html>

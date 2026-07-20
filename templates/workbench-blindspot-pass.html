@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="richinfo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="在正式方案写作前识别来源材料中的证据、范围、责任和验收盲点，并生成补充确认问题。">
+  <title>材料盲点检查工作台｜请替换任务名称</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="../assets/workbench.css">
+</head>
+<body data-reading-progress="true" data-composition-profile="workbench-gap-register">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <nav class="site-nav" aria-label="页内导航">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top">材料盲点检查</a>
+      <div class="nav-links"><a href="#boundary">检查边界</a><a href="#register">盲点清单</a><a href="#questions">补充问题</a></div>
+    </div>
+  </nav>
+
+  <header class="hero workbench-hero" id="top">
+    <div class="hero-inner">
+      <span class="eyebrow">材料盲点检查工作台</span>
+      <h1>在开始写方案前，先把<br>没有被材料证明的部分找出来</h1>
+      <p class="lead">该工作台用于记录“来源中未找到”的关键输入，并把真正影响范围、架构、承诺和验收的问题整理成可直接发送的确认清单。</p>
+      <div class="meta-row"><span>任务：请替换</span><span>材料版本：请替换</span><span>检查日期：请替换</span></div>
+      <div class="workbench-summary">
+        <p><strong>输出目标</strong><br>区分阻断项和改进项；每个盲点说明缺口、影响和精确补问，不把“材料未写”解释为“不存在”。</p>
+        <p class="workbench-note"><strong>使用边界</strong><br>该页面是写作前工作台。确认结果应回写来源说明或正式页面，不能只保存在浏览器选择状态中。</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" data-workbench>
+    <form>
+      <section class="section" id="boundary">
+        <div class="shell">
+          <div class="section-heading">
+            <span class="section-label">检查范围</span>
+            <div><h2>先固定检查范围</h2><p>只对实际读取的材料作出判断；未读取的附件、口头信息和未来版本不能被当成已确认事实。</p></div>
+          </div>
+          <div class="scope-map">
+            <div class="scope-core"><span>本次检查对象</span><strong>请替换材料名称、目录与版本</strong><p>说明已经完整读取的文件以及日期范围。</p></div>
+            <div class="scope-list">
+              <div class="scope-item"><strong>阅读任务</strong><span>请替换：理解、决策、验证或比较</span></div>
+              <div class="scope-item"><strong>关键读者</strong><span>请替换：管理层、技术人员或评审专家</span></div>
+              <div class="scope-item"><strong>证据限制</strong><span>请替换公开、内部、保密和待核验边界</span></div>
+              <div class="scope-item"><strong>不在本次检查中</strong><span>请替换未提供或明确排除的材料</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="register">
+        <div class="shell">
+          <div class="section-heading">
+            <span class="section-label">盲点登记</span>
+            <div><h2>盲点登记表</h2><p>下面是结构示例。实际使用时应根据来源逐项删除、改写或增加，不要机械保留六个类别。</p></div>
+          </div>
+          <div class="blindspot-register">
+            <article class="blindspot-item">
+              <div><span class="maturity-chip is-blocking">阻断项｜待确认</span><h3>范围边界</h3></div>
+              <div><strong>来源缺口</strong><p>材料描述了总体目标，但未找到本期纳入、依赖和排除事项的统一口径。</p></div>
+              <label class="blindspot-question"><input type="checkbox" data-blindspot-question value="请确认本期纳入范围、外部依赖和明确排除项，并指出相应依据。"><span><strong>建议补问</strong><br>请确认本期纳入范围、外部依赖和明确排除项，并指出相应依据。</span></label>
+            </article>
+            <article class="blindspot-item">
+              <div><span class="maturity-chip is-blocking">阻断项｜待确认</span><h3>验收口径</h3></div>
+              <div><strong>来源缺口</strong><p>材料列出了交付活动，但未找到可核验的验收物、通过条件和责任主体。</p></div>
+              <label class="blindspot-question"><input type="checkbox" data-blindspot-question value="请补充各阶段验收物、通过条件、确认人以及可作为证据的材料。"><span><strong>建议补问</strong><br>请补充各阶段验收物、通过条件、确认人以及可作为证据的材料。</span></label>
+            </article>
+            <article class="blindspot-item">
+              <div><span class="maturity-chip">改进项｜来源未找到</span><h3>角色责任</h3></div>
+              <div><strong>来源缺口</strong><p>多个参与方被提及，但决策、实施、复核和运营责任尚未形成闭环。</p></div>
+              <label class="blindspot-question"><input type="checkbox" data-blindspot-question value="请确认需求、技术、数据、安全和验收事项分别由谁提出、执行和最终确认。"><span><strong>建议补问</strong><br>请确认需求、技术、数据、安全和验收事项分别由谁提出、执行和最终确认。</span></label>
+            </article>
+            <article class="blindspot-item">
+              <div><span class="maturity-chip">改进项｜来源未找到</span><h3>接口与数据</h3></div>
+              <div><strong>来源缺口</strong><p>目标能力依赖外部系统或数据，但接口方式、数据边界和准备状态尚不明确。</p></div>
+              <label class="blindspot-question"><input type="checkbox" data-blindspot-question value="请列出需要接入的系统、接口责任方、数据范围、可用时间和安全限制。"><span><strong>建议补问</strong><br>请列出需要接入的系统、接口责任方、数据范围、可用时间和安全限制。</span></label>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="questions">
+        <div class="shell">
+          <div class="section-heading">
+            <span class="section-label">补充确认</span>
+            <div><h2>生成补充确认清单</h2><p>勾选真正影响当前工作的事项。未选择的问题不会进入交接文本。</p></div>
+          </div>
+          <div class="artifact-output">
+            <h3>可直接发送的确认文本</h3>
+            <textarea id="blindspot-result" data-blindspot-output readonly aria-label="生成的补充确认清单"></textarea>
+            <div class="artifact-actions">
+              <button class="artifact-button is-primary" type="button" data-copy-target="#blindspot-result">复制确认清单</button>
+              <button class="artifact-button" type="reset">清空选择</button>
+            </div>
+            <p class="artifact-live-status" data-artifact-status aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <footer class="footer"><div class="shell"><span>工作台模板｜结果需回写正式来源</span><span>版本：请替换</span></div></footer>
+  <script src="../assets/workbench.js" defer></script>
+  <script src="../assets/long-page-enhancements.js" defer></script>
+  <script src="../assets/editorial-editor.js" data-te-editor-asset="true" defer></script>
+</body>
+</html>
