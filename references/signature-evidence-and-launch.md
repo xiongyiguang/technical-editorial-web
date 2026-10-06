@@ -60,11 +60,11 @@ Use `.maturity-tag` and `data-maturity` to prevent proposals from turning possib
 Use `.hero-launch` for a product, model, version, capability, or major feature announcement. It is a visual variant, not a fifth narrative template.
 
 - Start with a compact `.launch-meta` row: version or release label, date, and category.
-- Let one large two-line thesis dominate the first viewport.
-- Use `.editorial-marker` on one short phrase only.
-- Add a faint engineering grid that fades downward; keep the canvas white or near white.
+- Let one thesis dominate the first viewport; choose its line count from wording, width, and legibility.
+- Use `.editorial-marker` on at most one short phrase when it marks the release's meaningful distinction; omit gratuitous word highlighting.
+- A faint engineering grid is optional when it reinforces an actual technical release motif; keep it quieter than the content and omit it if unnecessary.
 - Use one low-saturation highlight color. In Richinfo pages this may be the auxiliary yellow; other themes use their theme-aware editorial highlight.
-- Use cropped `.orbit-mark` geometry as a sparse release motif, not as a generic illustration system.
+- Cropped `.orbit-mark` geometry is optional as a sparse release motif; it is not required launch furniture or a generic illustration system.
 - Add `.launch-tier-grid` only when the source provides real tiers, editions, models, roles, or comparable paths. Keep all compared dimensions stable and omit unsupported prices or metrics.
 - Keep the body lead at reading width and use no heavy shadow, glass effect, or decorative particles.
 

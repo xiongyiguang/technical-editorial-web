@@ -12,8 +12,8 @@ Build professional Chinese solution and technical pages that read like a concise
 - Use a 12-column grid for complex sections and 4 or 6 columns for compact comparisons.
 - Keep a clear reading axis. Use asymmetry only when marginal notes or evidence benefit from it.
 - Let headings and whitespace create hierarchy before adding containers.
-- Use at least three supported spatial rhythms on a substantial page: reading width, asymmetric split, full-width band, wide diagram, or media field. Do not vary layout without an information reason.
-- Number ordinary top-level thematic sections in formal stable deliverables as `01／02／03…`. Treat the sequence as traceable document structure and keep it separate from phase, step, priority, and milestone numbering.
+- Choose spatial rhythm by reading task: reading width for sustained prose, a split for adjacent evidence, a wide field for diagrams or media. Comparable sections may repeat; there is no minimum number of layouts.
+- Add `01／02／03…` chapter numbers only when meeting cross-reference, source structure, or navigation benefits from them. Unnumbered formal sections are valid. When used, keep one continuous chapter sequence independent of phases, steps, priorities, and milestones.
 
 ## 3. Typography boundary
 
@@ -61,12 +61,12 @@ Neutral tokens:
 
 Never use the theme colors to create a multicolor card set. Prefer tinting the primary accent at low opacity for one featured surface.
 
-Alternate white, soft-neutral, and theme-tinted section surfaces to expose the reading rhythm. On a substantial proposal, one compact deep theme surface may carry a decisive thesis, value summary, or transition. It must use theme-aware dark color, high-contrast text, and bounded content; never use it as a generic conversion panel or repeat it across the page.
+Use white, soft-neutral, or theme-tinted surfaces to signal a meaningful group or transition; do not alternate backgrounds by section count. Continuous white reading surfaces are valid. One compact deep theme surface may carry a decisive sourced thesis, value summary, or transition, with theme-aware dark color and high-contrast text; avoid generic conversion panels.
 
 ## 5. Surfaces, borders, and depth
 
 - Default border: 1px solid neutral rule.
-- Default radius: 18px; compact controls: 999px pills only when semantically appropriate.
+- The bundled bounded-object radius is 18px, not a requirement for every module. Use open rules or square edges when they fit the content; keep equivalent objects consistent. Use pill controls only when semantically appropriate.
 - Prefer no shadow. If separation is necessary, use one subtle shadow with low opacity and small spread.
 - Use background grids at roughly 2% to 4% visual opacity. They must disappear behind dense reading content.
 - Do not use glass, blur, glow, glossy gradients, or bevel effects.
@@ -77,19 +77,19 @@ Alternate white, soft-neutral, and theme-tinted section surfaces to expose the r
 
 Treat common page components as a grammar, not decoration. First choose a task-specific opening and section recipe from `composition-recipes.md`; only then select local components. A substantial page may combine several of the following roles when the source supports them:
 
-1. **Hero orientation:** an eyebrow with a short rule, one thesis headline, a lead paragraph, source or version metadata, and one proof, visual, data, or architecture counterpart. Author deliberate semantic line breaks for long Chinese display titles; never leave one or two orphan characters on a line.
+1. **Hero orientation:** one thesis headline, a lead, and supported source or version metadata. Add an eyebrow only when it identifies a useful category; add a proof, visual, data, or architecture counterpart only when it improves understanding. Choose semantic line breaks for long Chinese titles; short titles may stay on one line.
 2. **Topic index:** use `.hero-chip-list` and `.topic-chip` only for a real page taxonomy, section index, status set, or filter. Labels and counts must match the authored content; chips are not decorative pills and are not a default hero requirement.
-3. **Section masthead:** combine a continuous chapter index, one Chinese label, a title, an optional real count, and a one-sentence reading cue. Keep the chapter index and Chinese label together on the same first line as one eyebrow group; place the title below that group. Use `.section-heading.is-numbered` for ordinary formal chapters and `.section-heading.is-composed` when a real count or third column is also needed.
+3. **Section masthead:** start with a customer-facing title. Add a chapter index, Chinese label, count, or reading cue only when each supplies distinct orientation. When numbered, keep index and label together above the title with `.section-heading.is-numbered`; use `.is-composed` only when the added column has a real role.
 4. **Structured object group:** use `.showcase-grid` when the reader must scan or compare genuinely independent capabilities, deliverables, paths, cases, or artifacts.
 5. **Card anatomy:** every `.showcase-card` should separate `.showcase-visual`, `.showcase-body`, and `.showcase-footer`. The visual explains shape or identity; the body names and summarizes the object; the footer carries evidence, status, ownership, source, or a bounded action.
-6. **Rhythm contrast:** alternate white, soft-neutral, theme-tinted, and at most one deep theme section with open narrative surfaces, bounded groups, wide diagrams, evidence rails, timelines, tables, bands, or media fields. Repetition provides comparison; variation exposes changes in information shape.
+6. **Rhythm contrast:** use open narrative, bounded groups, wide diagrams, evidence rails, timelines, tables, or media fields according to information shape. Repetition supports comparison; a surface change should identify a real grouping or transition.
 
 Do not force all six roles into every page. In particular, do not repeat one hero composition across unrelated task families. Use enough roles to make hierarchy visible before close reading, and remove any component that lacks supported content.
 
 - Hero: choose thesis, data, media, or architecture emphasis from the source; keep one decisive title, lead, and only supported proof.
-- Editorial launch hero: use release metadata, a large thesis, one theme-aware marker, faint grid, and sparse cropped orbit geometry; use only for a genuine launch or capability introduction.
+- Editorial launch hero: lead with real release metadata and a thesis. A marker, faint grid, or cropped orbit is optional and requires a useful emphasis or release motif; omit it when it competes with reading.
 - Signature visual: make one source-derived mechanism memorable through restrained inline SVG or CSS geometry; do not reuse it as decorative wallpaper.
-- Section header: use a continuous `01／02／03…` chapter number, one short Chinese label, a customer-facing title, and an optional reading cue; add a real count only when it aids scanning and does not repeat the title.
+- Section header: use a customer-facing title and optional reading cue. Add a continuous chapter number and one Chinese label when they help reference; add a real count only when it aids scanning and does not repeat the title.
 - Pull quote: one strong sentence with a primary-accent rule, not a colored card.
 - Structured showcase card: visual explanation, title, concise body, and evidence, status, ownership, source, or action metadata; use for bounded objects that benefit from scanning or comparison.
 - KPI band: large figures aligned on a common baseline with small labels and source notes.

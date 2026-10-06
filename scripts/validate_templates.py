@@ -9,6 +9,8 @@ from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
 
+from validate_delivery import section_numbering_errors
+
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE_DIR = ROOT / "templates"
@@ -29,31 +31,7 @@ VOID_TAGS = {
     "link", "meta", "param", "source", "track", "wbr",
 }
 THEMES = {"richinfo", "china-mobile", "bank-of-china", "custom"}
-LAYOUT_GROUPS = {
-    "hero": {"hero-grid", "hero-data", "hero-media", "hero-architecture", "hero-launch"},
-    "evidence": {"split-layout", "evidence-rail", "evidence-strip", "evidence-chain"},
-    "band": {"thesis-band"},
-    "comparison": {"comparison"},
-    "metric": {"metric-story", "hero-metrics"},
-    "decision": {"decision-grid"},
-    "scope": {"scope-map"},
-    "flow": {"process-chain"},
-    "architecture": {"system-architecture", "architecture"},
-    "hub": {"hub-map"},
-    "roadmap": {"roadmap"},
-    "case": {"case-narrative"},
-    "media": {"media-mosaic", "hero-visual"},
-    "signature": {"signature-visual"},
-    "maturity": {"maturity-register", "maturity-tag"},
-    "showcase": {"showcase-grid", "showcase-card"},
-    "single-point": {"single-point"},
-    "parallel": {"parallel-cluster"},
-    "hierarchy": {"hierarchy-branches"},
-    "cycle": {"cycle-orbit", "cycle-loop"},
-    "branching": {"decision-tree"},
-    "ownership": {"swimlane-flow"},
-    "dependency": {"dependency-map"},
-}
+
 NARRATIVE_TEMPLATES = {
     "solution-brief.html",
     "executive-report.html",
@@ -239,39 +217,17 @@ def check_template(path: Path) -> list[str]:
             errors.append(f"missing local asset: {asset}")
 
     if path.name in NARRATIVE_TEMPLATES:
-        groups = {
-            name for name, classes in LAYOUT_GROUPS.items() if parser.classes & classes
-        }
-        if len(groups) < 4:
-            errors.append(
-                "insufficient layout variety: expected at least 4 module groups, "
-                f"found {', '.join(sorted(groups)) or 'none'}"
-            )
-        for required_class in {"eyebrow", "section-heading"}:
+        for required_class in {"section-heading"}:
             if required_class not in parser.classes:
                 errors.append(f"missing common page composition class: {required_class}")
 
     if path.name in SPECIALIZED_TEMPLATES:
-        for required_class in {"eyebrow", "section-heading", "context-panel"}:
+        for required_class in {"section-heading", "context-panel"}:
             if required_class not in parser.classes:
                 errors.append(f"missing specialized deliverable class: {required_class}")
 
     if path.name in STABLE_TEMPLATES:
-        section_indexes = [
-            int(value)
-            for value in re.findall(
-                r'class=["\'][^"\']*\bsection-index\b[^"\']*["\'][^>]*>\s*(\d{2})\s*<',
-                text,
-                re.IGNORECASE,
-            )
-        ]
-        if not section_indexes:
-            errors.append("formal stable template missing numbered thematic sections")
-        elif section_indexes != list(range(1, len(section_indexes) + 1)):
-            errors.append(
-                "thematic section indexes must be continuous from 01: "
-                + ", ".join(f"{value:02d}" for value in section_indexes)
-            )
+        errors.extend(section_numbering_errors(text))
         visible_labels = re.findall(
             r'class=["\'][^"\']*\b(?:eyebrow|section-label|context-label)\b[^"\']*["\'][^>]*>([^<]+)',
             text,

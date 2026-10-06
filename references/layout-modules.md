@@ -12,8 +12,8 @@ For exploration and decision workbenches, read `workbench-artifacts.md` first. R
 4. Mark each source block by information shape: claim, evidence, hierarchy, sequence, comparison, ownership, boundary, status, quantity, dependency, media, risk, or action. Then read `composition-variation-matrix.md` for the complete thirteen-family routing matrix.
 5. Mark scope-sensitive statements by content maturity and identify any fact-to-impact-to-response evidence chains.
 6. Route each block to the closest module below, and give every component exactly one information job.
-7. Use at least three spatial rhythms on a substantial page when the evidence supports them: reading width, asymmetric split, structured object grid, full-width band, wide diagram, or media field.
-8. Avoid repeating the same composition in more than two consecutive sections unless the content is genuinely repetitive.
+7. Choose reading width, asymmetric split, structured object grid, full-width band, wide diagram, or media field by the source relationship; no layout-count minimum applies.
+8. Repeat comparable evidence or tasks consistently; reselect the composition when the information relationship changes.
 9. Remove any empty module. Never invent metrics, screenshots, dates, actors, or outcomes to complete a layout.
 10. Record the chosen variant for every major content block; color or surface changes do not count as composition changes.
 
@@ -107,12 +107,12 @@ Use when upstream inputs, the governed core, downstream consumers, and foundatio
 
 ## Section-heading behavior
 
-- In formal stable deliverables, number ordinary top-level thematic sections continuously with `.section-index`: `01／02／03…`. This is document structure, not decoration.
+- Add chapter numbers when cross-reference, source structure, or navigation benefits. Unnumbered formal sections are valid; when used, keep `.section-index` continuous from `01`.
 - Keep chapter numbers independent from stage, step, priority, and milestone numbers inside the section.
 - Use `.section-heading.is-numbered` for an index, one Chinese section label, a title, and an optional reading cue. The index and label must read as one horizontal eyebrow group such as `01  项目理解`; never isolate the number in a separate visual column.
 - Add `.section-count` only when it truthfully summarizes the objects in that section and improves scanning; remove it when the title already states the same quantity.
 - Use `.section-heading.is-composed` when a real count or a third reading column is also required.
-- Use `.section-heading.is-compact` only for unnumbered interludes or sections whose visual module already supplies hierarchy. Workbenches may remain unnumbered when controls define the task sequence.
+- Use `.section-heading.is-compact` for unnumbered formal sections, interludes, or modules that already supply hierarchy. Workbenches may remain unnumbered when controls define the task sequence.
 - Vary the reading axis deliberately: do not center every heading above every module.
 
 ## Recipe components
@@ -152,9 +152,9 @@ Prefer media hero, structured showcase for independent deliverables, case narrat
 ## Composition guardrails
 
 - Keep one primary narrative and one memorable structural signature.
-- Alternate white, soft-neutral, and theme-tinted reading surfaces. One compact deep theme section may carry a sourced thesis or transition, but never a generic conversion message.
+- Use white, soft-neutral, and theme-tinted surfaces for meaningful groups or transitions, without a rotation quota. One compact deep theme section may carry a sourced thesis, never a generic conversion message.
 - Use structured cards confidently for bounded objects, and use rules, bands, rails, diagrams, tables, and open grids for continuous or relational content.
-- Use one continuous chapter-number sequence for formal thematic sections; do not duplicate it as decoration or confuse it with process-stage numbering.
+- When chapter numbering is useful, use one continuous sequence; keep it separate from process-stage numbering.
 - Do not place a KPI band when the source lacks definitions, periods, units, and evidence.
 - Do not force every module into equal columns; let importance control span.
 - For every media block, record four routing facts before styling: image count, dominant orientation, relative importance, and shared versus independent captions. Use those facts to choose triptych, portrait cards, text-led row, or lead mosaic.

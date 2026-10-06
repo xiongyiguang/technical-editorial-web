@@ -122,6 +122,55 @@ class DeliveryParser(HTMLParser):
                 self.stack.pop()
 
 
+
+class SectionIndexParser(HTMLParser):
+    """Read optional chapter indexes, including nested text and unquoted classes."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.stack: list[tuple[str, list[str] | None]] = []
+        self.indexes: list[list[str]] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        classes = (dict(attrs).get("class") or "").split()
+        parts = [] if "section-index" in classes else None
+        if parts is not None:
+            self.indexes.append(parts)
+        if tag not in VOID_TAGS:
+            self.stack.append((tag, parts))
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        self.handle_starttag(tag, attrs)
+        if tag not in VOID_TAGS:
+            self.handle_endtag(tag)
+
+    def handle_endtag(self, tag: str) -> None:
+        for i in range(len(self.stack) - 1, -1, -1):
+            if self.stack[i][0] == tag:
+                del self.stack[i:]
+                break
+
+    def handle_data(self, data: str) -> None:
+        for _, parts in self.stack:
+            if parts is not None:
+                parts.append(data)
+
+
+def section_numbering_errors(text: str) -> list[str]:
+    """No chapter numbers is valid; present numbers must be well formed and continuous."""
+    parser = SectionIndexParser()
+    parser.feed(visible_markup(text))
+    values = ["".join(parts).strip() for parts in parser.indexes]
+    if not values:
+        return []
+    if any(not re.fullmatch(r"(?:[0-9]{2}|[1-9][0-9]{2,})", value) for value in values):
+        return ["thematic section indexes must contain chapter numbers such as 01: " + ", ".join(values)]
+    indexes = [int(value) for value in values]
+    if indexes != list(range(1, len(indexes) + 1)):
+        return ["thematic section indexes must be continuous from 01: " + ", ".join(values)]
+    return []
+
+
 def is_remote(value: str) -> bool:
     return value.startswith(("data:", "http://", "https://", "//", "#", "mailto:", "tel:"))
 
@@ -227,21 +276,7 @@ def validate(path: Path, single_file: bool, allow_placeholders: bool) -> list[st
             if term.lower() in heading.lower():
                 errors.append(f"customer-visible heading keeps authoring jargon: {term} -> {heading}")
     if parser.composition_profile in STABLE_COMPOSITION_PROFILES:
-        section_indexes = [
-            int(value)
-            for value in re.findall(
-                r'class=["\'][^"\']*\bsection-index\b[^"\']*["\'][^>]*>\s*(\d{2})\s*<',
-                content,
-                re.IGNORECASE,
-            )
-        ]
-        if not section_indexes:
-            errors.append("formal stable delivery missing numbered thematic sections")
-        elif section_indexes != list(range(1, len(section_indexes) + 1)):
-            errors.append(
-                "thematic section indexes must be continuous from 01: "
-                + ", ".join(f"{value:02d}" for value in section_indexes)
-            )
+        errors.extend(section_numbering_errors(content))
     if not allow_placeholders:
         for marker in PLACEHOLDERS:
             if marker.lower() in content.lower():

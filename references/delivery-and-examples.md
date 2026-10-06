@@ -15,7 +15,7 @@ When the request is not ready for a stable deliverable, ask for one of the five 
 ```
 
 ```text
-使用 $technical-editorial-web，完整读取 C:\资料\项目材料.docx。
+使用 $technical-editorial-web，完整读取 /实际项目目录/项目材料.docx。
 面向客户管理层和技术负责人，生成中文技术长页。
 主题使用 Richinfo；保留来源、范围和待确认状态。
 输出一个可直接发送的 clean 单文件 HTML，同时保留一个可编辑工作版。

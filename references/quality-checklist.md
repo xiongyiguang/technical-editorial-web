@@ -21,17 +21,17 @@
 - [ ] Major modules remain stable with representative short and long Chinese titles, different paragraph lengths, and realistic item counts.
 - [ ] Titles, descriptions, evidence, labels, and statuses can be replaced without rebuilding the DOM relationship or rewriting component CSS.
 - [ ] Each source block was routed by information shape rather than forced into the nearest visual component.
-- [ ] Ordinary top-level thematic sections in formal stable deliverables use one continuous `01／02／03…` chapter sequence.
+- [ ] Chapter numbering has a cross-reference or navigation purpose, or is omitted. When used, indexes form one continuous sequence from `01`.
 - [ ] Each formal chapter number and its Chinese section label sit together on one line; the number is not stranded in a separate visual column.
 - [ ] Chapter numbers and inner phase, step, priority, or milestone numbers remain separate and do not compete.
-- [ ] A substantial page uses supported spatial variation and does not repeat the same composition in more than two consecutive sections without a content reason.
-- [ ] A section-to-form inventory was made before build; a substantial proposal uses at least four content-fitting presentation forms.
+- [ ] Spatial variation or repetition has a content reason; comparable evidence can share a layout.
+- [ ] A section-to-form inventory records the relationship and selection reason; no layout-count quota drove unsupported modules.
 - [ ] Ordered phases, milestones, rollout batches, and gates use a timeline, milestone rail, or roadmap rather than a table.
 - [ ] Every major block was routed through the thirteen-family `composition-variation-matrix.md`, with the chosen variant justified by relationship, weight, order, condition, responsibility, measurement task, dependency, or feedback direction.
 - [ ] Process was not mistaken for timeline; hierarchy was not mistaken for dependency; boundary was not mistaken for status; branching was not rendered as ordinary parallel cards.
-- [ ] Adjacent major sections do not repeat the same variant, and three consecutive sections do not share one composition family without a documented content reason.
+- [ ] Repeated variants preserve meaningful comparison; changed information relationships use a suitable form.
 - [ ] The template keeps its unique `data-composition-profile`; a related page does not differ only by title, color, or customer name.
-- [ ] No more than two major sections use table or matrix grammar when another information-faithful form is available.
+- [ ] Tables or matrices serve stable-field comparison or audit tasks; their number follows the evidence, not a quota.
 - [ ] Auto-generated contents and reading progress appear only on genuinely long pages and point to stable section IDs.
 - [ ] The visible composition distinguishes the hero thesis, section purpose, object groups, evidence or diagrams, metadata, and closing action before close reading.
 - [ ] Chinese hero and section titles use deliberate semantic line breaks and leave no one- or two-character orphan line.
@@ -57,7 +57,7 @@
 - [ ] Generated imagery and diagrams use the active theme palette; customer brand colors do not leak into a vendor-themed page unless a dual-brand composition was explicitly requested.
 - [ ] A Richinfo bilingual text wordmark presents `彩讯科技` in theme orange and `RICHINFO` in neutral charcoal on one baseline.
 - [ ] A hero bitmap uses a container proportion suited to its content and does not appear as an unframed opaque-white rectangle pasted onto a tinted first screen.
-- [ ] White, soft-neutral, and theme-tinted sections alternate to create a clear meeting rhythm; no more than two consecutive sections share the same surface treatment.
+- [ ] Surface changes identify real groups or transitions; continuous white reading areas are valid and backgrounds are not rotated by count.
 - [ ] At most one compact deep theme section carries a sourced thesis, value summary, or transition; it is not a generic dark call to action.
 - [ ] No blue-purple gradient, glassmorphism, neon glow, heavy shadow, or multicolor KPI set appears.
 - [ ] Every customer-visible authored font-size, including clamp() bounds, is between 16px and 60px inclusive.
@@ -105,3 +105,7 @@
 - [ ] Automated scans find no forbidden font sizes or unresolved internal references.
 - [ ] `scripts/validate_delivery.py` passes in bundle or `--single-file` mode as appropriate.
 - [ ] Editor chrome remains the intentional 12px-15px exception; customer-visible authored page content remains within 16px-60px, and clean exports omit the editor.
+
+## 设计复核证据
+
+按 [design-review](design-review.md) 将设计计划与实际画面对照：先检查整体焦点和层次，再检查阅读尺寸、中文断行、装饰的信息作用与移动顺序。记录执行的文件、尺寸、问题和修正；未实际完成的视觉或交互项目标注为未验证。

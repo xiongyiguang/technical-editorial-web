@@ -90,7 +90,7 @@ Use when the primary task is to help a reader understand how a feature, mechanis
 ## Pattern selection rules
 
 - After choosing the primary narrative, route each source block through `layout-modules.md`; the numbered lists above define coverage, not a fixed page composition.
-- Number ordinary top-level thematic sections in every formal stable deliverable as `01／02／03…`; restart inner phases, steps, or milestones from their own sequence.
+- Add `01／02／03…` chapter numbers only when meeting cross-reference, source structure, or navigation benefits from them. Unnumbered formal sections are valid. When used, keep one continuous chapter sequence independent of phases, steps, priorities, and milestones.
 - Prefer Solution Brief when the source argues for a future target state.
 - Prefer Executive Report when the reader must decide or prioritize.
 - Prefer Technical Whitepaper when architecture and implementation detail are the main evidence.
